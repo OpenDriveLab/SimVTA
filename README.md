@@ -12,7 +12,7 @@ Zihao Zhang<sup>2</sup>, Yanhao Liu<sup>1</sup>, Chengen Xie<sup>1</sup>, Bailin
 ---
 
 <p align="center">
-  <img src="results/overview.png" width="100%" alt="From logged futures to candidate-matched supervision">
+  <img src="assets/overview.png" width="100%" alt="From logged futures to candidate-matched supervision">
 </p>
 
 **From logged futures to candidate-matched supervision.** WAM pretraining uses the ground-truth trajectory and its logged future video. Trajectory GRPO explores candidate trajectories using driving rewards, without matched video supervision. World Engine renders reconstructed scenes along selected candidate paths, providing matched supervision independent of the model's predictions.
@@ -34,7 +34,7 @@ Reported results in the paper:
 ## Matched Futures for Alternative Actions
 
 <p align="center">
-  <img src="results/matched-futures.png" width="100%" alt="Simulator-rendered futures for straight driving and lane changes">
+  <img src="assets/matched-futures.png" width="100%" alt="Simulator-rendered futures for straight driving and lane changes">
 </p>
 
 **Matched futures for alternative actions.** Left: shared observation history and executed paths for going straight (A), changing lanes to the left (B), and changing lanes to the right (C). Right: corresponding future frames rendered by the simulator. Colors match the paths and image rows.
@@ -42,7 +42,7 @@ Reported results in the paper:
 ## Video-Trajectory Alignment
 
 <p align="center">
-  <img src="results/video-trajectory-alignment.png" width="100%" alt="Video-trajectory alignment before and after post-training">
+  <img src="assets/video-trajectory-alignment.png" width="100%" alt="Video-trajectory alignment before and after post-training">
 </p>
 
 **Video-trajectory alignment before and after post-training.** Left: observation history and trajectory in bird's-eye view. Right: World Engine renderings and predictions from SimVTA and Epona.
