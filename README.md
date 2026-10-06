@@ -1,21 +1,23 @@
 # SimVTA: Simulation-Grounded Video-Trajectory Alignment for Driving World Action Models
 
-Changhui Jing<sup>1,2,4</sup>, Haochen Tian<sup>2</sup>, Hongchen Li<sup>1,2,4</sup>, Tianyu Li<sup>1</sup>, Caojun Wang<sup>1</sup>,<br>
-Zihao Zhang<sup>2</sup>, Yanhao Liu<sup>1</sup>, Chengen Xie<sup>1</sup>, Bailin Li<sup>3</sup>, Hao Zhao<sup>5</sup>, Zhenjie Yang<sup>2,‡</sup>
+> [Changhui Jing](https://scholar.google.com/citations?hl=en&user=B4Nu6pAAAAAJ), [Haochen Tian](https://github.com/hctian713), Hongchen Li, [Tianyu Li](https://sephyli.github.io/), Caojun Wang,
+> [Zihao Zhang](https://github.com/Zizizi-hao), Yanhao Liu, Chengen Xie, Bailin Li, Hao Zhao, [Zhenjie Yang](https://scholar.google.com/citations?hl=en&user=jVlRiUEAAAAJ)
 
-<sup>1</sup> Shanghai Innovation Institute · <sup>2</sup> OpenDriveLab at The University of Hong Kong<br>
-<sup>3</sup> Li Auto Inc. · <sup>4</sup> Tongji University · <sup>5</sup> Tsinghua University
-
-> 📧 Primary Contact: Changhui Jing ([changhui.jing@opendrivelab.com](mailto:changhui.jing@opendrivelab.com))  
-> ‡ Corresponding Author: Zhenjie Yang
+> - 📧 Primary Contact: Changhui Jing ([changhui.jing@opendrivelab.com](mailto:changhui.jing@opendrivelab.com))
+> - 🖊️ Joint effort by Shanghai Innovation Institute, OpenDriveLab at HKU, Li Auto Inc., Tongji University, and Tsinghua University.
+> - Corresponding Author: Zhenjie Yang
 
 ---
 
-<p align="center">
-  <img src="assets/overview.png" width="100%" alt="From logged futures to candidate-matched supervision">
-</p>
+![From logged futures to candidate-matched supervision](assets/overview.png)
 
 **From logged futures to candidate-matched supervision.** WAM pretraining uses the ground-truth trajectory and its logged future video. Trajectory GRPO explores candidate trajectories using driving rewards, without matched video supervision. World Engine renders reconstructed scenes along selected candidate paths, providing matched supervision independent of the model's predictions.
+
+## Highlights
+
+- 🚗 **Simulation-grounded alignment:** Render matched future videos for alternative candidate trajectories in reconstructed real-world scenes.
+- 🔍 **Selective video supervision:** Prioritize higher-error futures among high-reward candidates and jointly train trajectory planning and video prediction.
+- 📈 **Improved planning:** Achieve 91.3 PDMS on NAVSIM v1, 88.2 EPDMS on NAVSIM v2, and 37.3 average HD-Score on HUGSIM, with direct trajectory prediction at inference.
 
 ## Overview
 
@@ -33,20 +35,20 @@ Reported results in the paper:
 
 ## Matched Futures for Alternative Actions
 
-<p align="center">
-  <img src="assets/matched-futures.png" width="100%" alt="Simulator-rendered futures for straight driving and lane changes">
-</p>
+![Simulator-rendered futures for straight driving and lane changes](assets/matched-futures.png)
 
 **Matched futures for alternative actions.** Left: shared observation history and executed paths for going straight (A), changing lanes to the left (B), and changing lanes to the right (C). Right: corresponding future frames rendered by the simulator. Colors match the paths and image rows.
 
 ## Video-Trajectory Alignment
 
-<p align="center">
-  <img src="assets/video-trajectory-alignment.png" width="100%" alt="Video-trajectory alignment before and after post-training">
-</p>
+![Video-trajectory alignment before and after post-training](assets/video-trajectory-alignment.png)
 
 **Video-trajectory alignment before and after post-training.** Left: observation history and trajectory in bird's-eye view. Right: World Engine renderings and predictions from SimVTA and Epona.
 
 ## Acknowledgements
 
-We thank the authors and open-source contributors of **Epona**, **World Engine**, **NAVSIM**, and **HUGSIM** for providing the models, simulation tools, and evaluation benchmarks that support this work. We also thank the broader open-source community for its contributions to driving world models, autonomous driving, and 3D Gaussian Splatting.
+We thank the authors and open-source contributors of the following projects for providing the models, simulation tools, and evaluation benchmarks that support this work:
+
+- Epona | World Engine | [NAVSIM](https://github.com/autonomousvision/navsim) | [HUGSIM](https://github.com/hyzhou404/HUGSIM)
+
+We also thank the broader open-source community for its contributions to driving world models, autonomous driving, and 3D Gaussian Splatting.
