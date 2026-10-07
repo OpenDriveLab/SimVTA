@@ -5,7 +5,6 @@
 
 > - 📧 Primary Contact: Changhui Jing ([changhui.jing@opendrivelab.com](mailto:changhui.jing@opendrivelab.com))
 > - 🖊️ Joint effort by Shanghai Innovation Institute, OpenDriveLab at HKU, Li Auto Inc., Tongji University, and Tsinghua University.
-> - Corresponding Author: Zhenjie Yang
 
 ---
 
