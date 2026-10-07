@@ -11,7 +11,6 @@
 
 ![From logged futures to candidate-matched supervision](https://ik.imagekit.io/szpk/SimVTA/overview.png)
 
-**From logged futures to candidate-matched supervision.** WAM pretraining uses the ground-truth trajectory and its logged future video. Trajectory GRPO explores candidate trajectories using driving rewards, without matched video supervision. World Engine renders reconstructed scenes along selected candidate paths, providing matched supervision independent of the model's predictions.
 
 ## Highlights
 
@@ -37,13 +36,13 @@ Reported results in the paper:
 
 ![Simulator-rendered futures for straight driving and lane changes](https://ik.imagekit.io/szpk/SimVTA/matched-futures.png)
 
-**Matched futures for alternative actions.** Left: shared observation history and executed paths for going straight (A), changing lanes to the left (B), and changing lanes to the right (C). Right: corresponding future frames rendered by the simulator. Colors match the paths and image rows.
+**Simulator-rendered futures for going straight (A), changing lanes left (B), and changing lanes right (C).**
 
 ## Video-Trajectory Alignment
 
 ![Video-trajectory alignment before and after post-training](https://ik.imagekit.io/szpk/SimVTA/video-trajectory-alignment.png)
 
-**Video-trajectory alignment before and after post-training.** Left: observation history and trajectory in bird's-eye view. Right: World Engine renderings and predictions from SimVTA and Epona.
+**Video-trajectory alignment: World Engine renderings compared with SimVTA and Epona predictions.**
 
 ## Acknowledgements
 
