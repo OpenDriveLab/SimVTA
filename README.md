@@ -49,6 +49,14 @@ Reported results in the paper:
 
 We thank the authors and open-source contributors of the following projects for providing the models, simulation tools, and evaluation benchmarks that support this work:
 
-- Epona | World Engine | [NAVSIM](https://github.com/autonomousvision/navsim) | [HUGSIM](https://github.com/hyzhou404/HUGSIM)
+- [Epona](https://github.com/Kevin-thu/Epona) | [World Engine](https://github.com/OpenDriveLab/WorldEngine) | [NAVSIM](https://github.com/autonomousvision/navsim) | [HUGSIM](https://github.com/hyzhou404/HUGSIM)
 
 We also thank the broader open-source community for its contributions to driving world models, autonomous driving, and 3D Gaussian Splatting.
+
+## License and Citation
+
+All content in this repository is licensed under the
+[Apache-2.0 license](LICENSE).
+
+If our paper or code helps your research, please consider citing
+our work and giving this repository a star.
