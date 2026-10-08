@@ -17,6 +17,13 @@
 - 🔍 **Selective video supervision:** Prioritize higher-error futures among high-reward candidates and jointly train trajectory planning and video prediction.
 - 📈 **Improved planning:** Achieve 91.3 PDMS on NAVSIM v1, 88.2 EPDMS on NAVSIM v2, and 38.8 average HD-Score on HUGSIM, with direct trajectory prediction at inference.
 
+## 📋 TODO List
+
+- [x] Results and demo release.
+- [ ] More visualization results.
+- [ ] Code release.
+- [ ] Checkpoints release.
+
 ## Overview
 
 **SimVTA** is a simulation-grounded post-training framework that combines trajectory optimization with video supervision for driving world action models. Driving logs provide future videos only for recorded trajectories; SimVTA supplies matched visual supervision for alternative actions by rendering reconstructed real-world scenes along high-reward candidate paths with a 3D Gaussian Splatting simulator.
