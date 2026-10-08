@@ -15,7 +15,7 @@
 
 - 🚗 **Simulation-grounded alignment:** Render matched future videos for alternative candidate trajectories in reconstructed real-world scenes.
 - 🔍 **Selective video supervision:** Prioritize higher-error futures among high-reward candidates and jointly train trajectory planning and video prediction.
-- 📈 **Improved planning:** Achieve 91.3 PDMS on NAVSIM v1, 88.2 EPDMS on NAVSIM v2, and 37.3 average HD-Score on HUGSIM, with direct trajectory prediction at inference.
+- 📈 **Improved planning:** Achieve 91.3 PDMS on NAVSIM v1, 88.2 EPDMS on NAVSIM v2, and 38.8 average HD-Score on HUGSIM, with direct trajectory prediction at inference.
 
 ## Overview
 
@@ -29,7 +29,7 @@ Reported results in the paper:
 | --- | --- | --- |
 | NAVSIM v1 | PDMS | **91.3** (+5.1 over the 86.2 initialization) |
 | NAVSIM v2 | EPDMS | **88.2** |
-| HUGSIM | Average HD-Score | **37.3** |
+| HUGSIM | Average HD-Score | **38.8** |
 
 ## Matched Futures for Alternative Actions
 
