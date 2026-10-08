@@ -26,9 +26,7 @@
 
 ## Overview
 
-**SimVTA** is a simulation-grounded post-training framework that combines trajectory optimization with video supervision for driving world action models. Driving logs provide future videos only for recorded trajectories; SimVTA supplies matched visual supervision for alternative actions by rendering reconstructed real-world scenes along high-reward candidate paths with a 3D Gaussian Splatting simulator.
-
-Under a limited rendering budget, SimVTA prioritizes higher-error futures among the rendered candidates. It jointly optimizes trajectory planning with Group Relative Policy Optimization (GRPO) and video prediction with a flow-matching loss that updates shared representations. At inference time, the model predicts trajectories directly, without simulator calls.
+**SimVTA** is a simulation-grounded post-training framework for driving world action models. It extends supervision beyond logged trajectories using a 3D Gaussian Splatting simulator, combining trajectory GRPO with a flow-matching video loss that updates shared representations.
 
 Reported results in the paper:
 
