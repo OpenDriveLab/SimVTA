@@ -19,7 +19,7 @@
 
 ## 📋 TODO List
 
-- [x] Results and demo release.
+- [x] Results release.
 - [ ] More visualization results.
 - [ ] Code release.
 - [ ] Checkpoints release.
