@@ -1,7 +1,7 @@
 # SimVTA: Simulation-Grounded Video-Trajectory Alignment for Driving World Action Models
 
 [![Paper](https://img.shields.io/badge/-Paper-B31B1B?logo=arxiv&logoColor=white&labelColor=555)](https://arxiv.org/abs/2610.13781)
-[![Project Page](https://img.shields.io/badge/Project_Page-8A2BE2?logo=googlechrome&logoColor=white&labelColor=555)](https://github.com/OpenDriveLab/SimVTA)
+[![Project Page](https://img.shields.io/badge/Project_Page-8A2BE2?logo=googlechrome&logoColor=white&labelColor=555)](https://opendrivelab.com/SimVTA/)
 
 > [Changhui Jing](https://scholar.google.com/citations?user=B4Nu6pAAAAAJ), [Haochen Tian](https://scholar.google.com/citations?user=DoyuNwEAAAAJ), [Hongchen Li](https://scholar.google.com/citations?user=QO6p6OgAAAAJ), [Tianyu Li](https://sephyli.github.io/), [Caojun Wang](https://scholar.google.com/citations?user=35xHlDUAAAAJ),
 > [Zihao Zhang](https://scholar.google.com/citations?user=R2Brvm4AAAAJ), [Yanhao Liu](https://scholar.google.com/citations?user=dYicC-4AAAAJ), [Chengen Xie](https://scholar.google.com/citations?user=q0W3n-cAAAAJ), [Bailin Li](https://www.linkedin.com/in/libailin/), [Hao Zhao](https://sites.google.com/view/fromandto), [Zhenjie Yang](https://scholar.google.com/citations?user=jVlRiUEAAAAJ)
