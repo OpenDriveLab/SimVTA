@@ -81,9 +81,9 @@ wget -c https://huggingface.co/OpenDriveLab-org/SimVTA/resolve/main/simvta.pkl -
 wget -c https://huggingface.co/Kevin-thu/Epona/resolve/main/dcae_td_20000.pkl -O checkpoints/dcae_td_20000.pkl
 ```
 
-The DCAE checkpoint encodes the input camera images into latents. Use Epona's temporal-aware checkpoint for this configuration.
+The DCAE checkpoint encodes the input camera images into latents.
 
-**5. NAVSIM v1 Evaluation**
+**5. NAVSIM Evaluation**
 
 ```bash
 bash run/test_navsim.sh
