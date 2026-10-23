@@ -20,12 +20,17 @@
 - 🔍 **Selective video supervision:** Prioritize higher-error futures among high-reward candidates and jointly train trajectory planning and video prediction.
 - 📈 **Improved planning:** Achieve 91.3 PDMS on NAVSIM v1, 88.2 EPDMS on NAVSIM v2, and 38.8 average HD-Score on HUGSIM, with direct trajectory prediction at inference.
 
+## News
+
+- `[2026/10/23]` We released the [checkpoints](https://huggingface.co/OpenDriveLab-org/SimVTA) of SimVTA.
+- `[2026/10/12]` We released our [paper](https://arxiv.org/abs/2610.13781) on arXiv.
+
 ## 📋 TODO List
 
 - [x] Results release.
+- [x] Checkpoints release.
 - [ ] More visualization results.
 - [ ] Code release.
-- [ ] Checkpoints release.
 
 ## Overview
 
