@@ -20,7 +20,7 @@
 
 ## News
 
-- `[2026/10/23]` We released the [checkpoints](https://huggingface.co/OpenDriveLab-org/SimVTA) of SimVTA.
+- `[2026/10/23]` We released the [checkpoints](https://huggingface.co/OpenDriveLab-org/SimVTA) and inference code of SimVTA.
 - `[2026/10/12]` We released our [paper](https://arxiv.org/abs/2610.13781) on arXiv.
 
 ## 📋 TODO List
