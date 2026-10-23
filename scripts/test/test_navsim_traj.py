@@ -61,12 +61,14 @@ def add_arguments():
 
 args = add_arguments()
 
-seed = int(os.environ.get("EPONA_EVAL_SEED", "20260910"))
-print(f"Global evaluation seed: {seed}", flush=True)
-random.seed(seed)
-np.random.seed(seed)
-torch.manual_seed(seed)
-torch.cuda.manual_seed_all(seed)
+seed = os.environ.get("EPONA_EVAL_SEED", "")
+if seed:
+    seed = int(seed)
+    print(f"Global evaluation seed: {seed}", flush=True)
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
 torch.backends.cudnn.benchmark = True
 
 def main(cfg):
