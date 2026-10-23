@@ -1,7 +1,6 @@
 # SimVTA: Simulation-Grounded Video-Trajectory Alignment for Driving World Action Models
 
-[![Paper](https://img.shields.io/badge/-Paper-B31B1B?logo=arxiv&logoColor=white&labelColor=555)](https://arxiv.org/abs/2610.13781)
-[![Project Page](https://img.shields.io/badge/Project_Page-8A2BE2?logo=googlechrome&logoColor=white&labelColor=555)](https://opendrivelab.com/SimVTA/)
+[![Paper](https://img.shields.io/badge/-Paper-B31B1B?logo=arxiv&logoColor=white&labelColor=555)](https://arxiv.org/abs/2610.13781) [![Project Page](https://img.shields.io/badge/Project_Page-8A2BE2?logo=googlechrome&logoColor=white&labelColor=555)](https://opendrivelab.com/SimVTA/) [![Checkpoints](https://img.shields.io/badge/-Checkpoints-FFD21E?logo=huggingface&logoColor=white&labelColor=555)](https://huggingface.co/OpenDriveLab-org/SimVTA)
 
 > [Changhui Jing](https://scholar.google.com/citations?user=B4Nu6pAAAAAJ), [Haochen Tian](https://scholar.google.com/citations?user=DoyuNwEAAAAJ), [Hongchen Li](https://scholar.google.com/citations?user=QO6p6OgAAAAJ), [Tianyu Li](https://sephyli.github.io/), [Caojun Wang](https://scholar.google.com/citations?user=35xHlDUAAAAJ),
 > [Zihao Zhang](https://scholar.google.com/citations?user=R2Brvm4AAAAJ), [Yanhao Liu](https://scholar.google.com/citations?user=dYicC-4AAAAJ), [Chengen Xie](https://scholar.google.com/citations?user=q0W3n-cAAAAJ), [Bailin Li](https://www.linkedin.com/in/libailin/), [Hao Zhao](https://sites.google.com/view/fromandto), [Zhenjie Yang](https://scholar.google.com/citations?user=jVlRiUEAAAAJ)
@@ -12,7 +11,6 @@
 ---
 
 ![From logged futures to candidate-matched supervision](https://ik.imagekit.io/szpk/SimVTA/overview.png)
-
 
 ## Highlights
 
@@ -28,9 +26,68 @@
 ## 📋 TODO List
 
 - [x] Results release.
-- [x] Checkpoints release.
-- [ ] More visualization results.
-- [ ] Code release.
+- [x] Checkpoint release.
+- [x] Inference and evaluation code.
+- [ ] Training code.
+
+
+## Getting Started
+
+**1. Clone SimVTA**
+
+```bash
+git clone https://github.com/OpenDriveLab/SimVTA.git
+cd SimVTA
+```
+
+**2. Create Environment**
+
+```bash
+conda create -n simvta python=3.10 -y
+conda activate simvta
+pip install -r requirements.txt
+pip install -e .
+```
+
+Use a CUDA-compatible PyTorch installation and a GPU with bfloat16 support. NAVSIM v1 is included in `navsim/`.
+
+**3. Data Preparation**
+
+Prepare the NAVSIM v1 OpenScene navtest logs, sensor blobs, and nuPlan maps following the [NAVSIM data instructions](https://github.com/autonomousvision/navsim/blob/v1.1/docs/install.md). Organize the files as follows:
+
+```text
+SimVTA/
+├── checkpoints/
+│   ├── simvta.pkl
+│   └── dcae_td_20000.pkl
+├── datasets/
+│   ├── maps/
+│   │   └── nuplan-maps-v1.0/
+│   └── openscene/
+│       ├── navsim_logs/
+│       │   └── test/
+│       └── sensor_blobs/
+└── exp/
+    └── metric_cache/
+```
+
+**4. Download Checkpoints**
+
+Download `simvta.pkl` from [OpenDriveLab-org/SimVTA](https://huggingface.co/OpenDriveLab-org/SimVTA) and the temporal-aware DCAE checkpoint `dcae_td_20000.pkl` from [Kevin-thu/Epona](https://huggingface.co/Kevin-thu/Epona). Place both files in `checkpoints/`:
+
+```bash
+mkdir -p checkpoints
+wget -c https://huggingface.co/OpenDriveLab-org/SimVTA/resolve/main/simvta.pkl -O checkpoints/simvta.pkl
+wget -c https://huggingface.co/Kevin-thu/Epona/resolve/main/dcae_td_20000.pkl -O checkpoints/dcae_td_20000.pkl
+```
+
+The DCAE checkpoint encodes the input camera images into latents. Use Epona's temporal-aware checkpoint for this configuration.
+
+**5. NAVSIM v1 Evaluation**
+
+```bash
+bash run/test_navsim.sh
+```
 
 ## Overview
 
