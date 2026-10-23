@@ -109,7 +109,7 @@ Reported results in the paper:
 
 ## Video-Trajectory Alignment
 
-![Video-trajectory alignment before and after post-training](https://ik.imagekit.io/szpk/SimVTA/video-trajectory-alignment.png?updatedAt=1792686923154)
+![Video-trajectory alignment before and after post-training](https://ik.imagekit.io/szpk/SimVTA/video-trajectory-alignment.png?updatedAt=1792790244787)
 
 **Video-trajectory alignment: World Engine renderings compared with SimVTA and Epona predictions.**
 
